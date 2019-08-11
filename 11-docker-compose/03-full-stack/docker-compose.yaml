@@ -37,7 +37,11 @@ services:
   pingdirectory:
     image: pingidentity/pingdirectory:${PING_IDENTITY_DEVOPS_TAG}
     environment:
+<<<<<<< HEAD
       - SERVER_PROFILE_URL=https://github.com/robpieperping/Demo.git
+=======
+      - SERVER_PROFILE_URL=https://github.com/pingidentity/pingidentity-server-profiles.git
+>>>>>>> f58f14a5d1a6aa7ac6e697f1510bec6531ae7cb6
       - SERVER_PROFILE_PATH=baseline/pingdirectory
       - TOPOLOGY_PREFIX=03-full-stack_pingdirectory_
     env_file:
