@@ -43,8 +43,8 @@ services:
     env_file:
       - ~/.pingidentity/devops
     ports:
-      - 1636:636
-      - 1443:443
+      - 1636-1646:636
+      - 1443-1453:443
     networks:
       - pingnet-internal
 
