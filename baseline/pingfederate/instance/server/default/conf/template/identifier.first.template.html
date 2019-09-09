@@ -47,7 +47,7 @@ is not recommended as it may interfere with expected server behavior.
         font-family: 'Indie Flower', cursive;
         font-size: 36px;
       }
-      
+
       h4 {
         font-family: 'Indie Flower', cursive;
         font-size: 42px;
@@ -79,20 +79,20 @@ is not recommended as it may interfere with expected server behavior.
         <br/>
         <form method="POST" action="$resume_url" autocomplete="off">
             #if ($existing_identifiers.size() > 0)
-            <ul id="existingAccountsSelectionList" class="identifier-first__account-list">
+            <wired-listbox id="existingAccountsSelectionList" >
                 #foreach( $existing in $existing_identifiers )
-                <li class="identifier-first__account-item">
+                <wired-item class="identifier-first__account-item">
                     <div class="identifier-first__account-name" title="$escape.escape($existing)" onclick="selectIdentifier('$escape.escape($existing)')">$escape.escape($existing)</div>
                     <div class="identifier-first__remove-account" onclick="removeIdentifier('$escape.escape($existing)')">
                     </div>
-                </li>
+                </wired-item>
                 #end
-                <li class="identifier-first__account-item identifier-first__add-account">
+                <wired-item>
                     <a onclick="showIdentifierInputBox()">
                         $templateMessages.getMessage($messageKeyPrefix, "manualInput")
                     </a>
-                </li>
-            </ul>
+                </wired-item>
+            </wired-listbox>
             #end
 
 
@@ -106,10 +106,10 @@ is not recommended as it may interfere with expected server behavior.
 
             <div class="ping-input-container">
                 #if ($existing_identifiers.size() > 0)
-                <input id="identifierInput" style="display:none" type="text" size="36" name="$identifier" value=""
+                <wired-input id="identifierInput" style="display:none" type="text" size="36" name="$identifier" value=""
                        autocorrect="off" autocapitalize="off" onKeyPress="return postOnReturn(event)"/>
                 #else
-                <input id="identifierInput" type="text" size="36" name="$identifier" value="" autocorrect="off"
+                <wired-input id="identifierInput" type="text" size="36" name="$identifier" value="" autocorrect="off"
                        autocapitalize="off" onKeyPress="return postOnReturn(event)"/>
                 #end
                 <div class="place-bottom type-alert tooltip-text" id="username-text">
