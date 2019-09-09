@@ -16,7 +16,7 @@ services:
       - 9000:9000
     networks:
       - pingnet-dmz
-
+      
   pingfederate:
     image: pingidentity/pingfederate:${PING_IDENTITY_DEVOPS_TAG}
     command: wait-for pingdirectory:389 -t 300 -- entrypoint.sh start-server
@@ -46,7 +46,7 @@ services:
       - SERVER_PROFILE_PARENT=LICENSE
       - SERVER_PROFILE_LICENSE_URL=https://github.com/robpieperping/Demo.git
       - SERVER_PROFILE_LICENSE_PATH=licenses/pingdirectory
-    
+
     ports:
       - 1636:636
       - 1443:443

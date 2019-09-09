@@ -34,10 +34,28 @@ is not recommended as it may interfere with expected server behavior.
             #end
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@latest/webcomponents-loader.js"></script>
+    <script async src="https://unpkg.com/wired-elements@latest/dist/wired-elements.bundled.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+     h {
+        font-family: 'Indie Flower', cursive;
+        font-size: 72px;
+      }
+      p {
+        font-family: 'Indie Flower', cursive;
+        font-size: 36px;
+      }
+      
+      h4 {
+        font-family: 'Indie Flower', cursive;
+        font-size: 42px;
+      }
+    </style>
 </head>
 
-<body  onload="setFocus();">
+<body onload="setFocus();">
 
 <div class="ping-container ping-signin login-template">
 
