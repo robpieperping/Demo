@@ -52,19 +52,11 @@ is not recommended as it may interfere with expected server behavior.
     #end
 </head>
 
-<body onload="setFocus();" style="color:#376492">
+<body onload="setFocus();" style="background-image:url('assets/images/republic-logo.png'); background-size:auto;">
 
 <div class="ping-container ping-signin login-template">
 
-    <!--
-    if there is a logo present in the 'company-logo' container,
-    then 'has-logo' class should be added to 'ping-header' container.
-    -->
-    <div style="background-image:url('assets/images/republic-logo.png'); background-size:1520px 100px;">
 
-        $templateMessages.getMessage($messageKeyPrefix, "title")
-    </div>
-    <!-- .ping-header -->
 
     <div class="ping-body-container">
 
@@ -219,7 +211,7 @@ is not recommended as it may interfere with expected server behavior.
     </div><!-- .ping-body-container -->
 
     <div class="ping-footer-container">
-        <div class="ping-footer">
+        <div style="background-image:url('assets/images/republic_banner_image.png'); background-size:auto;">
             <div class="ping-credits"></div>
             <div class="ping-copyright">$templateMessages.getMessage("global.footerMessage")</div>
         </div>
