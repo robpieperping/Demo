@@ -53,7 +53,16 @@ is not recommended as it may interfere with expected server behavior.
 </head>
 
 <body onload="setFocus();"  class=" columns-layout">
-<div style="background-image:url('assets/images/logo-emc-lg.jpg');background-repeat: no-repeat; background-position: left;"></div>
+  <div class="ping-header" style="background-image:url('assets/images/logo-emc-lg.jpg');background-repeat: no-repeat; background-position: left;">
+      <span class="company-logo"><!-- client company logo here --></span>
+      <text id="company-logo-div-text">
+          #if ($existing_identifiers.size() > 0)
+          $templateMessages.getMessage($messageKeyPrefix, "selectTitle")
+          #else
+          $templateMessages.getMessage($messageKeyPrefix, "inputTitle")
+          #end
+      </text>
+  </div>
 
 <div style="background-image:url('assets/images/carousel-loss-control.jpg'); background-size:cover; background-position: right; background-repeat: no-repeat;" class="ping-container ping-signin login-template">
 
