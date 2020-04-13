@@ -19,7 +19,7 @@ services:
       - pingnet-internal
 
   pingaccess:
-    image: pingidentity/pingaccess:latest
+    image: pingidentity/pingaccess:1910
     command: wait-for pingfederate:9031 -t 420 -- entrypoint.sh start-server
     environment:
       - SERVER_PROFILE_URL=https://github.com/jblantz/Demo-POC.git
