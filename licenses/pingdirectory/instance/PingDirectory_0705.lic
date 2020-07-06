@@ -1,0 +1,14 @@
+ID=1567004
+Organization=Ping Identity Corporation (master)
+Product=PingDirectory
+Version=8.0
+IssueDate=2020-01-21
+EnforcementType=3
+ExpirationDate=2030-07-5
+Tier=Subscription
+PDPAPI=false
+SaasProvisioning=true
+WSTrustSTS=true
+OAuth=true
+SignCode=FF0F
+Signature=302C021433657C8E6875D6470485D7C1781977832A484F5402141D98E3FA4F7F30561B0D3939C1CB91C2D57DD031
